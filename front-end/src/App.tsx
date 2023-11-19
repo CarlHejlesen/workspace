@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import LoginButton from './components/login_button';
 import './App.css'
 import HelloButton from './components/HelloButton';
 function App() {
@@ -10,7 +9,8 @@ function App() {
     <>
        <div className="App">
       {/* Brug HelloButton komponenten her */}
-      <HelloButton />
+  
+    <LoginButton/>
     </div>
       
     </>
