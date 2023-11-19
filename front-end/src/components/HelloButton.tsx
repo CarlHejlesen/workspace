@@ -9,19 +9,20 @@ const HelloButton = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        // body: JSON.stringify({ data: 'Dine data her' }), // Tilføj dette, hvis du har en body i din request
+        credentials: 'include', // This is necessary to include cookies with the request
       });
-
+  
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-
+  
       const data = await response.text();
       console.log(data);
     } catch (error) {
       console.error('Der opstod en fejl under POST-anmodningen', error);
     }
   };
+  
 
   return <button onClick={sendPostRequest}>Sig Hej</button>;
 };

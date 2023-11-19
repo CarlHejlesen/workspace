@@ -1,16 +1,31 @@
 package team.backend;
 
 public class MyRequestObject {
-    // Anmodningsfelter
-    private String data;
+    private String username;
+    private String password;
 
-    public String getData() {
-        return data;
+    // Getters
+    public String getUsername() {
+        return username;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public String getPassword() {
+        return password;
     }
 
-    // getters og setters
+    // Setters
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    // Validation method
+    public boolean isValid() {
+        return username != null && password != null &&
+               !username.isEmpty() && !password.isEmpty() &&
+               username.length() <= 255 && password.length() <= 255;
+    }
 }

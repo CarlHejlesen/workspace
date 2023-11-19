@@ -11,6 +11,7 @@ function App() {
       {/* Brug HelloButton komponenten her */}
   
     <LoginButton/>
+    <HelloButton></HelloButton>
     </div>
       
     </>
