@@ -1,4 +1,4 @@
-package team.backend;
+package team.backend.security;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;

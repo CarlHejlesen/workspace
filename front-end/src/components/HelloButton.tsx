@@ -6,10 +6,11 @@ const HelloButton = () => {
     try {
       const response = await fetch('http://localhost:8080/sayhello', {
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
         },
-        credentials: 'include', // This is necessary to include cookies with the request
+         // This is necessary to include cookies with the request
       });
   
       if (!response.ok) {

@@ -1,7 +1,8 @@
-package team.backend;
+package team.backend.security;
 
 // Import statements for Spring framework annotations and classes
 import org.springframework.context.annotation.Configuration;
+
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -17,7 +18,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
             // Specify that only requests from "http://localhost:3000" are allowed to access these endpoints
             // This should be changed to the specific domain you expect your frontend to be served from
-            .allowedOrigins("http://localhost:5173/") // or the specific origin you need
+            .allowedOrigins("http://localhost:5173") // or the specific origin you need
             // Allow these HTTP methods for CORS requests. This covers most use cases for RESTful APIs
             .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
             // Allow sending cookies and authentication data in CORS requests

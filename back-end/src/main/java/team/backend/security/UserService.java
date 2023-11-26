@@ -1,4 +1,4 @@
-package team.backend;
+package team.backend.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -32,6 +32,7 @@ public class UserService {
     // Call this method to create a session after successful login
     public String createSession(String username, String sessionId) {
         User user = userRepository.findByUsername(username);
+        System.out.println("vi tester on den existere");
         if (user != null) {
             sessions.put(sessionId, user);
             return sessionId;
